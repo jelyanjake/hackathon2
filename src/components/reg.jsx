@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import StatusModal from './StatusModal';
+import { color } from 'framer-motion';
 
 function IntPage() {
   const interviewerRef = useRef(null);
@@ -24,72 +25,172 @@ function IntPage() {
   }, []);
 
   return (
-    <div style={wrapperStyle}>
-      <div style={layoutStyle}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          <div style={boxStyle}>
-            <p style={labelStyle}>Interviewer</p>
-            <video ref={interviewerRef} autoPlay playsInline width="200" height="150" />
+    <div className='interview-dashboard' style={dashboardStyle}>
+      <div style={wrapperStyle}>
+        <div style={layoutStyle}>
+          {/* Video Boxes Column */}
+          <div style={videoColumnStyle}>
+            <div style={videoBoxStyle}>
+              <p style={labelStyle}>Interviewer</p>
+              <video 
+                ref={interviewerRef} 
+                autoPlay 
+                playsInline 
+                style={videoStyle}
+              />
+            </div>
+            <div style={videoBoxStyle}>
+              <p style={labelStyle}>Interviewee</p>
+              <video 
+                ref={intervieweeRef} 
+                autoPlay 
+                playsInline 
+                style={videoStyle}
+              />
+            </div>
           </div>
-          <div style={boxStyle}>
-            <p style={labelStyle}>Interviewee</p>
-            <video ref={intervieweeRef} autoPlay playsInline width="200" height="150" />
+          
+          {/* Resume Box */}
+          <div style={resumeBoxStyle}>
+            <p style={resumeTitleStyle}>Resume</p>
+            <div style={resumeContentStyle}>
+              {/* Placeholder for resume content */}
+              <p style={placeholderTextStyle}>Upload or view candidate's resume here</p>
+            </div>
           </div>
-        </div>
-        <div style={{ ...boxStyle, width: '400px', height: '320px' }}>
-          <p style={{ fontSize: '20px', textAlign: 'center' }}>Resume box for interviewee</p>
-        </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', justifyContent: 'center' }}>
-          <button style={circleButton}>👍 Like</button>
-          <button style={circleButton}>👎 Dislike</button>
-          <button style={circleButton}>💬 Chat</button>-
+          
+          {/* Action Buttons */}
+          <div style={actionsColumnStyle}>
+            <button style={actionButtonStyle}>👍 Like</button>
+            <button style={actionButtonStyle}>👎 Dislike</button>
+            <button style={actionButtonStyle}>💬 Chat</button>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
+// Styles
+const dashboardStyle = {
+  backgroundColor: '#f0f2f5',
+  minHeight: '100vh',
+  padding: '20px',
+};
+
 const wrapperStyle = {
-  height: '100vh',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  backgroundColor: '#f5f5f5',
+  maxWidth: '1400px',
+  margin: '0 auto',
+  padding: '20px',
 };
 
 const layoutStyle = {
   display: 'flex',
-  flexDirection: 'row',
-  gap: '30px',
-  padding: '20px',
+  gap: '40px',
+  alignItems: 'center',
+  justifyContent: 'center',
 };
 
-const boxStyle = {
-  backgroundColor: '#4e6cff',
-  borderRadius: '15px',
-  padding: '10px',
-  width: '200px',
-  height: '150px',
+const videoColumnStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '30px',
+};
+
+const videoBoxStyle = {
+  backgroundColor: '#ffffff',
+  borderRadius: '20px',
+  padding: '25px',
+  width: '350px',
+  height: '300px',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
   color: '#fff',
+  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+  transition: 'transform 0.3s ease',
+  ':hover': {
+    transform: 'translateY(-5px)'
+  }
+};
+
+const videoStyle = {
+  width: '100%',
+  height: '100%',
+  borderRadius: '10px',
+  objectFit: 'cover',
 };
 
 const labelStyle = {
-  fontSize: '18px',
-  marginBottom: '5px',
+  fontSize: '24px',
+  marginBottom: '15px',
+  fontWeight: '600',
+  color: '#333',
 };
 
-const circleButton = {
-  width: '80px',
-  height: '80px',
+const resumeBoxStyle = {
+  backgroundColor: '#ffffff',
+  borderRadius: '20px',
+  padding: '25px',
+  width: '500px',
+  height: '400px',
+  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+  display: 'flex',
+  flexDirection: 'column',
+};
+
+const resumeTitleStyle = {
+  fontSize: '24px',
+  fontWeight: '600',
+  marginBottom: '20px',
+  color: '#333',
+  textAlign: 'center',
+};
+
+const resumeContentStyle = {
+  flex: 1,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: '#f9f9f9',
+  borderRadius: '10px',
+  border: '2px dashed #ddd',
+};
+
+const placeholderTextStyle = {
+  fontSize: '18px',
+  color: '#888',
+  textAlign: 'center',
+};
+
+const actionsColumnStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '25px',
+};
+
+const actionButtonStyle = {
+  width: '120px',
+  height: '120px',
   borderRadius: '50%',
-  backgroundColor: '#eee',
+  backgroundColor: '#ffffff',
   border: 'none',
-  fontSize: '12px',
+  fontSize: '18px',
+  fontWeight: '500',
   cursor: 'pointer',
+  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+  transition: 'all 0.3s ease',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  ':hover': {
+    transform: 'scale(1.05)',
+    backgroundColor: '#f0f0f0'
+  },
+  ':active': {
+    transform: 'scale(0.98)'
+  }
 };
 
 export default IntPage;
