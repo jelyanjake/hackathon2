@@ -84,7 +84,7 @@ function RegPage() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="phone">Phone Number:</label>
+              <label htmlFor="phone">Email :</label>
               <input
                 type="tel"
                 id="phone"
@@ -96,7 +96,7 @@ function RegPage() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="idnum">School ID Number:</label>
+              <label htmlFor="idnum" placeholder ="Test" > School ID Number:</label>
               <input
                 type="text"
                 id="idnum"
@@ -122,6 +122,7 @@ function RegPage() {
               </button>
             </div>
           </form>
+          <small><a href='/'>Already have an account?</a></small>
         </div>
       </div>
       <StatusModal

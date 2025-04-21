@@ -2,8 +2,9 @@ import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import menuIcon from '../assets/menu-burger.png';
 import usersIcon from '../assets/users.png'
-import timeIcon from '../assets/user-time.png';
-import regIcon from '../assets/clipboard-list.png';
+import histIcon from '../assets/hist.gif';
+import intIcon from '../assets/diagram.gif';
+import homeIcon from '../assets/home.gif';
 import './menupopup.css';
 
 const MenuPopup = () => {
@@ -41,15 +42,15 @@ const MenuPopup = () => {
         <div className="popup">
           <ul>
           <li onClick={() => handleItemClick('/')}>
-              <img src={timeIcon} alt="Time" className="menu-icon" />
+              <img src={homeIcon} alt="Home" className="menu-icon" />
               <span>Home</span>
             </li>
             <li onClick={() => handleItemClick('/register')}>
-              <img src={regIcon} alt="Register" className="menu-icon" />
+              <img src={intIcon} alt="Interview" className="menu-icon" />
               <span>Interview</span>
             </li>
             <li onClick={() => handleItemClick('/users')}>
-              <img src={usersIcon} alt="Users" className="menu-icon" />
+              <img src={histIcon} alt="Users" className="menu-icon" />
               <span>History</span>
             </li>
           </ul>

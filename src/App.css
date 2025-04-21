@@ -271,6 +271,13 @@ nav {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.login-form {
+  max-width: 500px;
+  margin: auto auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .userlog {
   max-width: 1200px;
   margin: 2rem auto;
@@ -352,6 +359,10 @@ button[type="submit"]:hover {
 
 .register-btn {
   width: 80%;
+}
+
+.login-btn {
+  width: 70%;
 }
 
 .time-btn {
@@ -495,5 +506,5 @@ button[type="submit"]:hover {
   align-items: center;
   flex-direction: column;
   margin-top: 20px;
-  
+
 }

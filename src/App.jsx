@@ -7,6 +7,7 @@ import MenuPopup from './components/menupopup';
 import HomePage from './components/home';
 import RegPage from './components/reg';
 import UsersPage from './components/logs';
+import LoginPage from './components/login';
 import logo from './assets/meteor.gif';
 
 function App() {
@@ -50,7 +51,7 @@ function App() {
                 variants={pageVariants}
                 transition={pageTransition}
               >
-                <HomePage />
+                <LoginPage />
               </motion.div>
             } />
             <Route path="/register" element={
@@ -73,6 +74,17 @@ function App() {
                 transition={pageTransition}
               >
                 <UsersPage />
+              </motion.div>
+            } />
+                        <Route path="/registration" element={
+              <motion.div
+                initial="initial"
+                animate="in"
+                exit="out"
+                variants={pageVariants}
+                transition={pageTransition}
+              >
+                <HomePage />
               </motion.div>
             } />
           </Routes>
