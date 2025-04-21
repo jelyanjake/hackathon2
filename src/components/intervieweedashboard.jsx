@@ -45,4 +45,4 @@ function IntPage() {
   );
 }
 
-export default IntPage;
+export default dashboard1;

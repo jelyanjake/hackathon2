@@ -16,6 +16,11 @@ function RegPage() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  const handleItemClick = (path) => {
+    navigate(path);
+    setIsOpen(false);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('loading');
