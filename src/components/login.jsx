@@ -10,11 +10,6 @@ function HomePage() {
   const [status, setStatus] = useState(null);
   const [statusMessage, setStatusMessage] = useState('');
 
-  const handleItemClick = (path) => {
-    navigate(path);
-    setIsOpen(false);
-  };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -91,7 +86,7 @@ function HomePage() {
               >Login</button>
             </div>
           </form>
-          <small><a onClick={() => handleItemClick('/registration')}>Don't have an account?</a></small>
+          <small><a href='/registration'>Don't have an account?</a></small>
         </div>
       </div>
       <StatusModal

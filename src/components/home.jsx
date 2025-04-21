@@ -127,7 +127,7 @@ function RegPage() {
               </button>
             </div>
           </form>
-          <small><a onClick={() => handleItemClick('/')}>Already have an account?</a></small>
+          <small><a href='/'>Already have an account?</a></small>
         </div>
       </div>
       <StatusModal
