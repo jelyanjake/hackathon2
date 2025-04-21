@@ -24,12 +24,12 @@ function HomePage() {
     try {
       // Check if user exists with provided credentials
       const response = await fetch(
-        `https://67f50ba7913986b16fa2f9ff.mockapi.io/api/v1/users?phone=${formData.phone}&idnum=${formData.idnum}`
+        `https://67f50ba7913986b16fa2f9ff.mockapi.io/api/v1/users?phone=${formData.email}&idnum=${formData.password}`
       );
       const users = await response.json();
       
       if (!Array.isArray(users) || users.length === 0) {
-        throw new Error('Invalid phone number or ID');
+        throw new Error('Invalid email or password');
       }
 
       const user = users[0]; // Get the first matching user

@@ -30,24 +30,13 @@ function RegPage() {
     try {
       // Check for duplicates
       const checkResponse = await fetch(
-        `https://67f50ba7913986b16fa2f9ff.mockapi.io/api/v1/users?phone=${formData.phone}`
+        `https://67f50ba7913986b16fa2f9ff.mockapi.io/api/v1/users?phone=${formData.email}`
       );
       const phoneUsers = await checkResponse.json();
       
       if (Array.isArray(phoneUsers)) {
-        if (phoneUsers.some(user => user.phone === formData.phone)) {
-          throw new Error('Phone number is already registered');
-        }
-      }
-
-      const idCheck = await fetch(
-        `https://67f50ba7913986b16fa2f9ff.mockapi.io/api/v1/users?idnum=${formData.idnum}`
-      );
-      const idUsers = await idCheck.json();
-      
-      if (Array.isArray(idUsers)) {
-        if (idUsers.some(user => user.idnum === formData.idnum)) {
-          throw new Error('School ID is already registered');
+        if (phoneUsers.some(user => user.email === formData.email)) {
+          throw new Error('Email is already used.');
         }
       }
 
