@@ -113,7 +113,7 @@ function RegPage() {
         checked={formData.role === 2}
         onChange={handleChange}
       />
-      Interviewer
+      Recruiter
     </label>
   </div>
   <div>
@@ -125,7 +125,7 @@ function RegPage() {
         checked={formData.role === 1}
         onChange={handleChange}
       />
-      Interviewee
+      Applicant
     </label>
   </div>
 </div>
