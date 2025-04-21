@@ -95,7 +95,7 @@ function RegPage() {
                 type="text"
                 id="email"
                 name="email"
-                value={formData.phone}
+                value={formData.email}
                 onChange={handleChange}
                 required
               />
@@ -107,7 +107,7 @@ function RegPage() {
                 type="text"
                 id="password"
                 name="password"
-                value={formData.phone}
+                value={formData.password}
                 onChange={handleChange}
                 required
               />

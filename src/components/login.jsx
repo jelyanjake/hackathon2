@@ -60,7 +60,7 @@ function HomePage() {
                 type="tel"
                 id="phone"
                 name="phone"
-                value={formData.phone}
+                value={formData.email}
                 onChange={handleChange}
                 required
                 autoFocus
@@ -74,7 +74,7 @@ function HomePage() {
                 id="idnum"
                 name="idnum"
                 autoComplete='off'
-                value={formData.idnum}
+                value={formData.password}
                 onChange={handleChange}
                 required
               />
