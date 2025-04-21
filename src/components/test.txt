@@ -1,0 +1,58 @@
+import { useState, useEffect, useRef } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+
+function App() {
+  const [count, setCount] = useState(0)
+  const videoRef = useRef(null)
+
+  useEffect(() => {
+    const startCamera = async () => {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true })
+        if (videoRef.current) {
+          videoRef.current.srcObject = stream
+        }
+      } catch (err) {
+        console.error("Error accessing camera:", err)
+      }
+    }
+
+    startCamera()
+  }, [])
+
+  return (
+    <>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+
+      <div>
+        <h2>Camera Preview</h2>
+        <video ref={videoRef} autoPlay playsInline width="320" height="240" />
+      </div>
+
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
+}
+
+export default App
