@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import StatusModal from './StatusModal';
+import { useNavigate,Link} from 'react-router-dom';
 
 function RegPage() {
   const [formData, setFormData] = useState({
@@ -127,7 +128,7 @@ function RegPage() {
               </button>
             </div>
           </form>
-          <small><a href='/'>Already have an account?</a></small>
+          <small><Link to="/">Already have an account?</Link></small>
         </div>
       </div>
       <StatusModal

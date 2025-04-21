@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import StatusModal from './StatusModal';
+import { useNavigate,Link} from 'react-router-dom';
 
 function HomePage() {
   const [formData, setFormData] = useState({
@@ -86,7 +87,7 @@ function HomePage() {
               >Login</button>
             </div>
           </form>
-          <small><a href='/registration'>Don't have an account?</a></small>
+          <small><Link to="/registration">Don't have an account?</Link></small>
         </div>
       </div>
       <StatusModal
