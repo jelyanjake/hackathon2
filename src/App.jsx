@@ -7,7 +7,7 @@ import MenuPopup from './components/menupopup';
 import HomePage from './components/home';
 import RegPage from './components/reg';
 import UsersPage from './components/logs';
-
+import logo from './assets/meteor.gif';
 
 function App() {
   
@@ -31,7 +31,7 @@ function App() {
       <header className="header">
         <div className="container">
           <nav>
-            <a href="#" className="logo">&#128223; Exhibit Registration System</a>
+            <a href="#" className="logo"><img src={logo} className='logo-icon'></img>JobStreams</a>
             <ul className="nav-links">
               <li><MenuPopup /></li>
             </ul>
@@ -81,7 +81,7 @@ function App() {
 
       <footer className="footer">
         <div className="container">
-          <p>Group 1 | Time Log Box w/ SMS Broadcasting | BSIT - 3A</p>
+          <p>ICT Congress | Hackathon | UCPT Team A</p>
         </div>
       </footer>
     </div>

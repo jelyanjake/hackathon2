@@ -42,15 +42,15 @@ const MenuPopup = () => {
           <ul>
           <li onClick={() => handleItemClick('/')}>
               <img src={timeIcon} alt="Time" className="menu-icon" />
-              <span>Time In/Out</span>
+              <span>Home</span>
             </li>
             <li onClick={() => handleItemClick('/register')}>
               <img src={regIcon} alt="Register" className="menu-icon" />
-              <span>Register</span>
+              <span>Interview</span>
             </li>
             <li onClick={() => handleItemClick('/users')}>
               <img src={usersIcon} alt="Users" className="menu-icon" />
-              <span>Users</span>
+              <span>History</span>
             </li>
           </ul>
         </div>

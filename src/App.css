@@ -116,8 +116,8 @@ nav {
 }
 
 .section-title h2 {
-  font-size: 2rem;
-  color: var(--primary);
+  font-size: 4rem;
+  color: white;
 }
 
 .features-grid {
@@ -404,4 +404,87 @@ button[type="submit"]:hover {
   width: 16px;
   height: 16px;
   margin-right: 10px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: -5px;
+}
+
+
+.hero-content1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 8px;
+  margin-bottom: 30px;
+}
+      
+.imgdiv img {
+  width: 180%;
+  margin-left: -200px;
+  margin-top: 50px;
+}
+
+.menu2 {
+  margin-top: 150px;
+}
+
+.menu3 {
+  background-color: #ffffff;
+  border-radius: 11px;
+  width: 50vh;
+  height: 80vh;
+  border: 1px solid #cacaca;
+}
+
+.hero-content2 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  background-color: green;
+}
+
+.form-group2 {
+  margin-bottom: 1.5rem;
+}
+
+.form-group2 label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.form-group2 input[type="text"],input[type="tel"] {
+  background-color: #ffffff;
+  color:#000000;
+}
+
+.form-group2 h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.form-group2 input {
+  width: 80%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group2 input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
 }
