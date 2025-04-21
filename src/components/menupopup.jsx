@@ -45,11 +45,11 @@ const MenuPopup = () => {
               <img src={homeIcon} alt="Home" className="menu-icon" />
               <span>Home</span>
             </li>
-            <li onClick={() => handleItemClick('/register')}>
+            <li onClick={() => handleItemClick('/interviews')}>
               <img src={intIcon} alt="Interview" className="menu-icon" />
               <span>Interview</span>
             </li>
-            <li onClick={() => handleItemClick('/users')}>
+            <li onClick={() => handleItemClick('/history')}>
               <img src={histIcon} alt="Users" className="menu-icon" />
               <span>History</span>
             </li>

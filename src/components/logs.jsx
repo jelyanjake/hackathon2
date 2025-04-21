@@ -1,6 +1,6 @@
 import './logs.css';
 
-function UsersPage() {
+function HistPage() {
     return (
       <section id="users">
         <div className="container">
@@ -34,4 +34,4 @@ function UsersPage() {
     );
   }
 
-  export default UsersPage;
+  export default HistPage;

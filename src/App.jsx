@@ -4,10 +4,10 @@ import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import MenuPopup from './components/menupopup';
-import HomePage from './components/home';
-import RegPage from './components/reg';
-import UsersPage from './components/logs';
 import LoginPage from './components/login';
+import RegPage from './components/home';
+import HistPage from './components/logs';
+import IntPage from './components/reg';
 import logo from './assets/meteor.gif';
 
 function App() {
@@ -54,7 +54,7 @@ function App() {
                 <LoginPage />
               </motion.div>
             } />
-            <Route path="/register" element={
+            <Route path="/registration" element={
               <motion.div
                 initial="initial"
                 animate="in"
@@ -65,7 +65,7 @@ function App() {
                 <RegPage />
               </motion.div>
             } />
-            <Route path="/users" element={
+            <Route path="/interviews" element={
               <motion.div
                 initial="initial"
                 animate="in"
@@ -73,10 +73,10 @@ function App() {
                 variants={pageVariants}
                 transition={pageTransition}
               >
-                <UsersPage />
+                <IntPage />
               </motion.div>
             } />
-                        <Route path="/registration" element={
+            <Route path="/history" element={
               <motion.div
                 initial="initial"
                 animate="in"
@@ -84,7 +84,7 @@ function App() {
                 variants={pageVariants}
                 transition={pageTransition}
               >
-                <HomePage />
+                <HistPage />
               </motion.div>
             } />
           </Routes>

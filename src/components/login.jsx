@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import StatusModal from './StatusModal';
 
-function LoginPage() {
+function HomePage() {
   const [formData, setFormData] = useState({
     phone: '',
     idnum: ''
@@ -86,7 +86,7 @@ function LoginPage() {
               >Login</button>
             </div>
           </form>
-          <small><a href='/registration'>Don't have an account?</a></small>
+          <small><a onClick={() => handleItemClick('/registration')}>Don't have an account?</a></small>
         </div>
       </div>
       <StatusModal
@@ -98,4 +98,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default HomePage;
