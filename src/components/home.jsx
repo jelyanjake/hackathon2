@@ -90,11 +90,23 @@ function RegPage() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="phone">Email :</label>
+              <label htmlFor="email">Email :</label>
               <input
-                type="tel"
-                id="phone"
-                name="phone"
+                type="ema"
+                id="email"
+                name="email"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="phone">Password :</label>
+              <input
+                type="pass"
+                id="password"
+                name="password"
                 value={formData.phone}
                 onChange={handleChange}
                 required
@@ -128,7 +140,6 @@ function RegPage() {
     </label>
   </div>
 </div>
-
 
             <div className="form-actions">
               <button 
