@@ -102,17 +102,33 @@ function RegPage() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="idnum" placeholder ="Test" > School ID Number:</label>
-              <input
-                type="text"
-                id="idnum"
-                name="idnum"
-                autoComplete='off'
-                value={formData.idnum}
-                onChange={handleChange}
-                required
-              />
-            </div>
+  <label>Choose your role:</label>
+  <div>
+    <label>
+      <input
+        type="radio"
+        name="role"
+        value="interviewer"
+        checked={formData.role === "interviewer"}
+        onChange={handleChange}
+      />
+      Interviewer
+    </label>
+  </div>
+  <div>
+    <label>
+      <input
+        type="radio"
+        name="role"
+        value="interviewee"
+        checked={formData.role === "interviewee"}
+        onChange={handleChange}
+      />
+      Interviewee
+    </label>
+  </div>
+</div>
+
 
             <div className="form-actions">
               <button 
