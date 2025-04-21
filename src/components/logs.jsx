@@ -6,27 +6,27 @@ function HistPage() {
         <div className="container">
           <div className="section-title">
             <div className="userlog">
-            <h2>User Statistics</h2>
+            <h2>Interview Statistics</h2>
               <div class="parent">
                 <div class="div1">
                   <p>5</p>
-                  <p>Number of Users</p>
+                  <p>Interviews Sessions</p>
                 </div>
                 <div class="div2">
-                <p>5</p>
-                <p>Active</p>
+                <p>2</p>
+                <p>Likes</p>
                 </div>
                 <div class="div3">
                 <p>5</p>
-                <p>Inactive</p>
+                <p>Dislikes</p>
                 </div>
                 <div class="div4">
                 <p>Search Bar</p>
                 </div>
               </div>
               <hr />
-            <p>user list something with delete buttons</p>
-            <p>temporary stuff / unfinished</p>
+            <p>Use Analytics</p>
+            <p>History of Interviews</p>
             </div>
           </div>
         </div>
