@@ -92,7 +92,7 @@ function RegPage() {
             <div className="form-group">
               <label htmlFor="email">Email :</label>
               <input
-                type="ema"
+                type="text"
                 id="email"
                 name="email"
                 value={formData.phone}
@@ -102,9 +102,9 @@ function RegPage() {
             </div>
 
             <div className="form-group">
-              <label htmlFor="phone">Password :</label>
+              <label htmlFor="pass">Password :</label>
               <input
-                type="pass"
+                type="text"
                 id="password"
                 name="password"
                 value={formData.phone}
@@ -121,7 +121,7 @@ function RegPage() {
         type="radio"
         name="role"
         value="interviewer"
-        checked={formData.role === "interviewer"}
+        checked={formData.role === 2}
         onChange={handleChange}
       />
       Interviewer
@@ -133,7 +133,7 @@ function RegPage() {
         type="radio"
         name="role"
         value="interviewee"
-        checked={formData.role === "interviewee"}
+        checked={formData.role === 1}
         onChange={handleChange}
       />
       Interviewee
