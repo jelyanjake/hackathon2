@@ -10,7 +10,7 @@ function RegPage() {
     <section id="features">
       <div className="container">
         <div className="section-title">
-          <h2>testing123123123</h2>
+          <h2>lokhhhhhh</h2>
           <p>awdawd</p>
         </div>
       </div>
