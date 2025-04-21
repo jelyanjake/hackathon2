@@ -117,7 +117,7 @@ nav {
 
 .section-title h2 {
   font-size: 4rem;
-  color: white;
+  color: var(--primary);
 }
 
 .features-grid {
